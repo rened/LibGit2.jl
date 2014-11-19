@@ -17,6 +17,8 @@ libgit2 = library_dependency("libgit2",
     end
 )
 
+provides(Nix, "libgit2", libgit2)
+
 provides(Sources,
          URI("https://github.com/libgit2/libgit2/archive/v$version.tar.gz"),
          libgit2,
